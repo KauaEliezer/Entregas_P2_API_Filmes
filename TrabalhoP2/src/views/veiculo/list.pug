@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+    center 
+        h1 Lista de veiculos
+        button 
+            a(href='veiculos/form') Cadastro de Veiculos
+        br
+        br
+
+        table(style='width:100%', border='1', )
+            thead(style='background-color:gray') 
+                tr 
+                    th Marca 
+                    th Modelo 
+                    th Valor 
+                    th Alterar 
+                    th Excluir
+            tbody 
+                each veiculo in veiculosList
+                    tr
+                        td= veiculo.marca
+                        td= veiculo.modelo
+                        td= veiculo.valor
+                        td
+                            form(action='veiculos/alteracao/'+veiculo.id method='get')
+                                button Alterar 
+                                form
+                        td 
+                            form(action='veiculos/deletar/'+veiculo.id method='get')
+                                button Excluir
+                                form
+
+
+                                

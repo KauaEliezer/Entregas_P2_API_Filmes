@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Cadastro de Veiculos
+    body 
+        h1 Cadastro de Veiculos 
+        br
+        h3  
+            a(href='veiculos') Listagem de Veiculos
+        br
+        center
+            div(border=10)
+                form(action ='/veiculos/criar', method="post")
+                    label Marca do Veiculo:  
+                        input(name = 'marca', requerid, type='text')
+                    br
+                    br
+                    label Modelo do Veiculo:  
+                        input(name = 'modelo', requerid, type='text')
+                    br
+                    br
+                    label Valor do Veiculo:  
+                        input(name = 'valor', requerid, type='decimal')
+                    br
+                    br
+                    button(type="submit") Cadastrar 
+                    button(type="Voltar") Voltar
